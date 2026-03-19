@@ -8,10 +8,10 @@ import {
 } from 'n8n-workflow';
 
 import { request, waitForResult } from './transport/request';
-import { taskBuilders } from './tasks';
-import allFields from './descriptions';
 import { TaskType } from './types';
 import { softId } from './const';
+import { taskBuilders } from './taskBuilder';
+import { allFields } from './fields';
 
 type CapmonsterResponse = {
 	errorId: number;
@@ -22,6 +22,7 @@ type CreateTaskResponse = CapmonsterResponse & {
 	taskId: number;
 };
 
+
 export class CapmonsterCloud implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'CapMonster Cloud',
@@ -29,7 +30,7 @@ export class CapmonsterCloud implements INodeType {
 		icon: 'file:favicon.svg',
 		group: ['transform'],
 		version: 1,
-		description: 'Solve captchas via CapMonster Cloud',
+		description: 'Node for solving CAPTCHAs via CapMonsterCloud service.',
 		defaults: { name: 'CapMonster Cloud' },
 		inputs: ['main'],
 		outputs: ['main'],
@@ -52,12 +53,11 @@ export class CapmonsterCloud implements INodeType {
 				const credentials = await this.getCredentials('capmonsterCloudApi');
 				const apiKey = credentials.apiKey as string;
 
-				const taskType = this.getNodeParameter('taskType', i) as TaskType;
+				const operation = this.getNodeParameter('operation', i) as TaskType;
 
 				let task: IDataObject;
 
-
-				if (taskType === 'json') {
+				if (operation === 'json') {
 					const raw = this.getNodeParameter('taskJson', i) as string;
 
 					try {
@@ -74,18 +74,16 @@ export class CapmonsterCloud implements INodeType {
 						);
 					}
 				} else {
-
-					const builder = taskBuilders[taskType];
+					const builder = taskBuilders[operation];
 
 					if (!builder) {
-						throw new NodeOperationError(this.getNode(), `Unsupported task type: ${taskType}`, {
+						throw new NodeOperationError(this.getNode(), `Unsupported task type: ${operation}`, {
 							itemIndex: i,
 						});
 					}
 
 					task = builder.call(this, i);
 				}
-
 
 				task = Object.fromEntries(
 					Object.entries(task).filter(([, v]) => v !== undefined && v !== ''),
