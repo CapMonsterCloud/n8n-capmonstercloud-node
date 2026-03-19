@@ -14,7 +14,7 @@ export const jsonTaskFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				taskType: ['json'],
+				operation: ['json'],
 			},
 		},
 		description: 'Raw CapMonster task object (without clientKey)',

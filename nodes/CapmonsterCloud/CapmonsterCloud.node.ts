@@ -53,11 +53,11 @@ export class CapmonsterCloud implements INodeType {
 				const credentials = await this.getCredentials('capmonsterCloudApi');
 				const apiKey = credentials.apiKey as string;
 
-				const taskType = this.getNodeParameter('taskType', i) as TaskType;
+				const operation = this.getNodeParameter('operation', i) as TaskType;
 
 				let task: IDataObject;
 
-				if (taskType === 'json') {
+				if (operation === 'json') {
 					const raw = this.getNodeParameter('taskJson', i) as string;
 
 					try {
@@ -74,10 +74,10 @@ export class CapmonsterCloud implements INodeType {
 						);
 					}
 				} else {
-					const builder = taskBuilders[taskType];
+					const builder = taskBuilders[operation];
 
 					if (!builder) {
-						throw new NodeOperationError(this.getNode(), `Unsupported task type: ${taskType}`, {
+						throw new NodeOperationError(this.getNode(), `Unsupported task type: ${operation}`, {
 							itemIndex: i,
 						});
 					}

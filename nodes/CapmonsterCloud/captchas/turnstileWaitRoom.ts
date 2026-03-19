@@ -8,7 +8,7 @@ export const turnstileWaitRoom: INodeProperties[] = [
 		name: 'websiteURL',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileWaitRoom'] } },
+		displayOptions: { show: { operation: ['turnstileWaitRoom'] } },
 		default: '',
 	},
 	{
@@ -16,7 +16,7 @@ export const turnstileWaitRoom: INodeProperties[] = [
 		name: 'websiteKey',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileWaitRoom'] } },
+		displayOptions: { show: { operation: ['turnstileWaitRoom'] } },
 		default: '',
 	},
 	{
@@ -25,7 +25,7 @@ export const turnstileWaitRoom: INodeProperties[] = [
 		type: 'string',
 		typeOptions: { editor: 'codeNodeEditor', rows: 5 },
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileWaitRoom'] } },
+		displayOptions: { show: { operation: ['turnstileWaitRoom'] } },
 		default: '',
 	},
 	{
@@ -33,7 +33,7 @@ export const turnstileWaitRoom: INodeProperties[] = [
 		name: 'userAgent',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileWaitRoom'] } },
+		displayOptions: { show: { operation: ['turnstileWaitRoom'] } },
 		default: userAgent,
 	},
 ];

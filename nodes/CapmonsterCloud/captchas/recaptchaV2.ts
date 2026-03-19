@@ -8,7 +8,7 @@ export const recaptchaV2Fields: INodeProperties[] = [
 		name: 'websiteURL',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['recaptchaV2'] } },
+		displayOptions: { show: { operation: ['recaptchaV2'] } },
 		default: '',
 	},
 	{
@@ -16,7 +16,7 @@ export const recaptchaV2Fields: INodeProperties[] = [
 		name: 'websiteKey',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['recaptchaV2'] } },
+		displayOptions: { show: { operation: ['recaptchaV2'] } },
 		default: '',
 	},
 	{
@@ -24,7 +24,7 @@ export const recaptchaV2Fields: INodeProperties[] = [
 		name: 'recaptchaDataSValue',
 		type: 'string',
 
-		displayOptions: { show: { taskType: ['recaptchaV2'] } },
+		displayOptions: { show: { operation: ['recaptchaV2'] } },
 		default: '',
 		description: 'Optional data-s value from reCAPTCHA. One-time token from div attribute.',
 	},
@@ -33,7 +33,7 @@ export const recaptchaV2Fields: INodeProperties[] = [
 		displayName: 'User Agent',
 		name: 'userAgent',
 		type: 'string',
-		displayOptions: { show: { taskType: ['recaptchaV2'] } },
+		displayOptions: { show: { operation: ['recaptchaV2'] } },
 		default: userAgent,
 		description: 'Browser User-Agent string. Use a modern browser signature.',
 	},
@@ -42,7 +42,7 @@ export const recaptchaV2Fields: INodeProperties[] = [
 		displayName: 'Cookies',
 		name: 'cookies',
 		type: 'string',
-		displayOptions: { show: { taskType: ['recaptchaV2'] } },
+		displayOptions: { show: { operation: ['recaptchaV2'] } },
 		default: '',
 		description: 'Cookies in format: name1=value1; name2=value2',
 	},
@@ -52,7 +52,7 @@ export const recaptchaV2Fields: INodeProperties[] = [
 		name: 'isInvisible',
 		type: 'boolean',
 
-		displayOptions: { show: { taskType: ['recaptchaV2'] } },
+		displayOptions: { show: { operation: ['recaptchaV2'] } },
 		default: false,
 		description: 'Whether the captcha is invisible (no checkbox)',
 	},

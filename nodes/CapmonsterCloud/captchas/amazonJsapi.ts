@@ -8,7 +8,7 @@ export const amazonJsApi: INodeProperties[] = [
 		name: 'websiteURL',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonJsApi'] } },
+		displayOptions: { show: { operation: ['amazonJsApi'] } },
 		default: '',
 	},
 	{
@@ -16,7 +16,7 @@ export const amazonJsApi: INodeProperties[] = [
 		name: 'websiteKey',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonJsApi'] } },
+		displayOptions: { show: { operation: ['amazonJsApi'] } },
 		default: '',
 	},
 	{
@@ -24,21 +24,21 @@ export const amazonJsApi: INodeProperties[] = [
 		name: 'captchaScript',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonJsApi'] } },
+		displayOptions: { show: { operation: ['amazonJsApi'] } },
 		default: '',
 	},
 	{
 		displayName: 'Cookie Solution',
 		name: 'cookieSolution',
 		type: 'boolean',
-		displayOptions: { show: { taskType: ['amazonJsApi'] } },
+		displayOptions: { show: { operation: ['amazonJsApi'] } },
 		default: false,
 	},
 	{
 		displayName: 'User Agent',
 		name: 'userAgent',
 		type: 'string',
-		displayOptions: { show: { taskType: ['amazonJsApi'] } },
+		displayOptions: { show: { operation: ['amazonJsApi'] } },
 		default: userAgent,
 	},
 ];

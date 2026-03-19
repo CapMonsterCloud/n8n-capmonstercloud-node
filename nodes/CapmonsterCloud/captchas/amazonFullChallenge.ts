@@ -7,7 +7,7 @@ export const amazonFullChallenge: INodeProperties[] = [
 		name: 'websiteURL',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: '',
 	},
 	{
@@ -15,7 +15,7 @@ export const amazonFullChallenge: INodeProperties[] = [
 		name: 'challengeScript',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: '',
 	},
 	{
@@ -23,7 +23,7 @@ export const amazonFullChallenge: INodeProperties[] = [
 		name: 'websiteKey',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: '',
 	},
 	{
@@ -31,7 +31,7 @@ export const amazonFullChallenge: INodeProperties[] = [
 		name: 'context',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: '',
 	},
 	{
@@ -39,21 +39,21 @@ export const amazonFullChallenge: INodeProperties[] = [
 		name: 'iv',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: '',
 	},
 	{
 		displayName: 'Captcha Script',
 		name: 'captchaScript',
 		type: 'string',
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: '',
 	},
 	{
 		displayName: 'Cookie Solution',
 		name: 'cookieSolution',
 		type: 'boolean',
-		displayOptions: { show: { taskType: ['amazonFullChallenge'] } },
+		displayOptions: { show: { operation: ['amazonFullChallenge'] } },
 		default: false,
 	},
 ];

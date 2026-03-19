@@ -16,7 +16,6 @@ import { basilisk } from './captchas/basilisk';
 import { tendi } from './captchas/tendi';
 import { binance } from './captchas/binance';
 import { imperva } from './captchas/imperva';
-import { TaskType } from './types';
 import { prosopo } from './captchas/prosopo';
 import { temu } from './captchas/temu';
 import { yidun } from './captchas/yidun';
@@ -32,6 +31,7 @@ import { turnstileChallengeCfClearance } from './captchas/turnstileChallengeCfCl
 import { amazonFullChallenge } from './captchas/amazonFullChallenge';
 import { amazonJsApi } from './captchas/amazonJsapi';
 import { amazonInvisibleChallenge } from './captchas/amazonInvisibleChallenge';
+import { TaskType } from './types';
 
 
 const options: Array<{ name: string; value: TaskType }> = [
@@ -70,9 +70,10 @@ const options: Array<{ name: string; value: TaskType }> = [
 
 export const allFields: INodeProperties[] = [
 	{
-		displayName: 'Task Type',
-		name: 'taskType',
+		displayName: 'Operations',
+		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		options: options,
 		default: 'recaptchaV2',
 	},

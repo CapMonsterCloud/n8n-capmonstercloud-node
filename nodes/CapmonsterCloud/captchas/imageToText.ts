@@ -9,7 +9,7 @@ export const imageToText: INodeProperties[] = [
 			rows: 6,
 		},
 		required: true,
-		displayOptions: { show: { taskType: ['imageToText'] } },
+		displayOptions: { show: { operation: ['imageToText'] } },
 		default: '',
 		description: 'Base64',
 	},

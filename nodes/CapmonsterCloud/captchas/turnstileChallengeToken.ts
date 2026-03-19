@@ -8,7 +8,7 @@ export const turnstileChallengeToken: INodeProperties[] = [
 		name: 'websiteURL',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: '',
 	},
 	{
@@ -16,7 +16,7 @@ export const turnstileChallengeToken: INodeProperties[] = [
 		name: 'websiteKey',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: '',
 	},
 	{
@@ -24,7 +24,7 @@ export const turnstileChallengeToken: INodeProperties[] = [
 		name: 'pageAction',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: '',
 	},
 	{
@@ -32,7 +32,7 @@ export const turnstileChallengeToken: INodeProperties[] = [
 		name: 'data',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: '',
 	},
 	{
@@ -40,7 +40,7 @@ export const turnstileChallengeToken: INodeProperties[] = [
 		name: 'pageData',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: '',
 	},
 	{
@@ -48,14 +48,14 @@ export const turnstileChallengeToken: INodeProperties[] = [
 		name: 'userAgent',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: userAgent,
 	},
 	{
 		displayName: 'API JS URL',
 		name: 'apiJsUrl',
 		type: 'string',
-		displayOptions: { show: { taskType: ['turnstileChallengeToken'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeToken'] } },
 		default: '',
 	},
 ];

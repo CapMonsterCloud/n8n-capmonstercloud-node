@@ -39,7 +39,7 @@ export const proxyFields: INodeProperties[] = [
 		default: false,
 		displayOptions: {
 			show: {
-				taskType: taskTypes,
+				operation: taskTypes,
 			},
 		},
 	},
@@ -56,7 +56,7 @@ export const proxyFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				useProxy: [true],
-				taskType: ['recaptchaV2', 'recaptchaV3'],
+				operation: taskTypes,
 			},
 		},
 	},
@@ -68,7 +68,7 @@ export const proxyFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				useProxy: [true],
-				taskType: taskTypes,
+				operation: taskTypes,
 			},
 		},
 		description: 'IP/hostname proxy. Example: 1.2.3.4 или proxy.example.com.',
@@ -81,7 +81,7 @@ export const proxyFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				useProxy: [true],
-				taskType: taskTypes,
+				operation: taskTypes,
 			},
 		},
 	},
@@ -93,7 +93,7 @@ export const proxyFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				useProxy: [true],
-				taskType: taskTypes,
+				operation: taskTypes,
 			},
 		},
 	},
@@ -106,7 +106,7 @@ export const proxyFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				useProxy: [true],
-				taskType: taskTypes,
+				operation: taskTypes,
 			},
 		},
 	},

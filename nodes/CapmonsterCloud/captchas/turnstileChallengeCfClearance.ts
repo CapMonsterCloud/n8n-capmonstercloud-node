@@ -8,7 +8,7 @@ export const turnstileChallengeCfClearance: INodeProperties[] = [
 		name: 'websiteURL',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeCfClearance'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeCfClearance'] } },
 		default: '',
 	},
 	{
@@ -16,7 +16,7 @@ export const turnstileChallengeCfClearance: INodeProperties[] = [
 		name: 'websiteKey',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeCfClearance'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeCfClearance'] } },
 		default: '',
 	},
 	{
@@ -24,7 +24,7 @@ export const turnstileChallengeCfClearance: INodeProperties[] = [
 		name: 'htmlPageBase64',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeCfClearance'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeCfClearance'] } },
 		default: '',
 	},
 	{
@@ -32,7 +32,7 @@ export const turnstileChallengeCfClearance: INodeProperties[] = [
 		name: 'userAgent',
 		type: 'string',
 		required: true,
-		displayOptions: { show: { taskType: ['turnstileChallengeCfClearance'] } },
+		displayOptions: { show: { operation: ['turnstileChallengeCfClearance'] } },
 		default: userAgent,
 	},
 ];
