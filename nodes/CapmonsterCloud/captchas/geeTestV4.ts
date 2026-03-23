@@ -1,6 +1,6 @@
 import { INodeProperties, IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { getProxyFields } from '../proxy';
-import { userAgent } from '../const';
+import { userAgent as defaultUserAgent } from '../const';
 
 export const geeTestV4Fields: INodeProperties[] = [
 	{
@@ -10,6 +10,7 @@ export const geeTestV4Fields: INodeProperties[] = [
 		required: true,
 		displayOptions: { show: { operation: ['geeTestV4'] } },
 		default: '',
+		description: 'Whether Address of the page on which the captcha is solved',
 	},
 	{
 		displayName: 'GT',
@@ -18,7 +19,7 @@ export const geeTestV4Fields: INodeProperties[] = [
 		required: true,
 		displayOptions: { show: { operation: ['geeTestV4'] } },
 		default: '',
-		description: 'GeeTest captcha_id parameter for the domain',
+		description: 'Whether The GeeTest identifier key for the domain - the captcha_id parameter',
 	},
 	{
 		displayName: 'Geetest API Subdomain',
@@ -26,9 +27,9 @@ export const geeTestV4Fields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: { show: { operation: ['geeTestV4'] } },
 		default: '',
-		description: 'Custom Geetest API subdomain (не api.geetest.com)',
+		description:
+			'Geetest API subdomain server (must be different from api.geetest.com). Optional parameter, required for some sites.',
 	},
-
 	{
 		displayName: 'Geetest Get Lib',
 		name: 'geetestGetLib',
@@ -36,35 +37,34 @@ export const geeTestV4Fields: INodeProperties[] = [
 		typeOptions: { editor: 'codeNodeEditor', rows: 3 },
 		displayOptions: { show: { operation: ['geeTestV4'] } },
 		default: '',
-		description: 'JSON string с параметрами загрузки скрипта',
+		description: 'Path to the captcha script to display it on the page. Send JSON as a string.',
 	},
-
 	{
 		displayName: 'Init Parameters',
 		name: 'initParameters',
 		type: 'json',
 		displayOptions: { show: { operation: ['geeTestV4'] } },
 		default: {},
-		description: 'Дополнительные параметры для версии 4 (используются с riskType)',
+		description:
+			'Whether Additional parameters for version 4, used together with “riskType” (captcha type/characteristics of its verification)',
 	},
-
 	{
 		displayName: 'User Agent',
 		name: 'userAgent',
 		type: 'string',
 		displayOptions: { show: { operation: ['geeTestV4'] } },
-		default: userAgent,
-		description: 'Browser User-Agent used for captcha recognition',
+		default: defaultUserAgent,
+		description: 'Whether Browser User-Agent used to recognize captcha',
 	},
 ];
 
 export const buildGeeTestV4 = function (this: IExecuteFunctions, i: number): IDataObject {
 	const result: IDataObject = {
 		type: 'GeeTestTask',
+		version: 4,
 		websiteURL: this.getNodeParameter('websiteURL', i),
 		gt: this.getNodeParameter('gt', i),
-		version: 4,
-		...getProxyFields.call(this, i), // добавляет прокси, если указаны
+		...getProxyFields.call(this, i),
 	};
 
 	const subdomain = this.getNodeParameter('geetestApiServerSubdomain', i, '') as string;
@@ -76,8 +76,8 @@ export const buildGeeTestV4 = function (this: IExecuteFunctions, i: number): IDa
 	const initParams = this.getNodeParameter('initParameters', i, {}) as object;
 	if (initParams && Object.keys(initParams).length > 0) result.initParameters = initParams;
 
-	const userAgent = this.getNodeParameter('userAgent', i, '') as string;
-	if (userAgent) result.userAgent = userAgent;
+	const ua = this.getNodeParameter('userAgent', i, '') as string;
+	if (ua) result.userAgent = ua;
 
 	return result;
 };

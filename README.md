@@ -17,7 +17,7 @@
 ![img.png](images/keyNode.png)
 4. Select Task Type:
 
-![selectCaptcha.png](images/selectCaptcha.png)
+![selectCaptcha1.png](images/selectCaptcha1.png)
 
 - Use the Task Type dropdown to choose the kind of captcha you want to solve:
   - JSON (Custom Task) – supply any valid CapMonster task JSON.
