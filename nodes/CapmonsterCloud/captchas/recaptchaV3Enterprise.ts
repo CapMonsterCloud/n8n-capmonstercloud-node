@@ -1,6 +1,5 @@
 import { INodeProperties, IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { getProxyFields } from '../proxy';
-import { userAgent } from '../const';
 
 export const recaptchaV3Enterprise: INodeProperties[] = [
 	{
@@ -41,30 +40,6 @@ export const recaptchaV3Enterprise: INodeProperties[] = [
 		default: 'verify',
 		description: 'Action parameter passed by the ReCaptcha widget (e.g. login_test)',
 	},
-	{
-		displayName: 'User Agent',
-		name: 'userAgent',
-		type: 'string',
-		displayOptions: { show: { operation: ['recaptchaV3Enterprise'] } },
-		default: userAgent,
-		description: 'Browser User-Agent string used in emulation',
-	},
-	{
-		displayName: 'Cookies',
-		name: 'cookies',
-		type: 'string',
-		displayOptions: { show: { operation: ['recaptchaV3Enterprise'] } },
-		default: '',
-		description: 'Additional cookies: name1=value1; name2=value2',
-	},
-	{
-		displayName: 'API Domain',
-		name: 'apiDomain',
-		type: 'string',
-		displayOptions: { show: { operation: ['recaptchaV3Enterprise'] } },
-		default: '',
-		description: 'Domain to load reCAPTCHA from (e.g. www.google.com)',
-	},
 ];
 
 export const buildRecaptchaV3Enterprise = function (
@@ -83,15 +58,6 @@ export const buildRecaptchaV3Enterprise = function (
 
 	const pageAction = this.getNodeParameter('pageAction', i, 'verify') as string;
 	if (pageAction) result.pageAction = pageAction;
-
-	const userAgent = this.getNodeParameter('userAgent', i, '') as string;
-	if (userAgent) result.userAgent = userAgent;
-
-	const cookies = this.getNodeParameter('cookies', i, '') as string;
-	if (cookies) result.cookies = cookies;
-
-	const apiDomain = this.getNodeParameter('apiDomain', i, '') as string;
-	if (apiDomain) result.apiDomain = apiDomain;
 
 	return result;
 };
