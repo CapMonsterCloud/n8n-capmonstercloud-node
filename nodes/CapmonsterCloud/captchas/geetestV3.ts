@@ -27,7 +27,7 @@ export const geeTestV3Fields: INodeProperties[] = [
 		required: true,
 		displayOptions: { show: { operation: ['geeTestV3'] } },
 		default: '',
-		description: 'Dynamic challenge ключ (обновляется каждый раз)',
+		description: 'Dynamic challenge key (changes on each request)',
 	},
 	{
 		displayName: 'Geetest API Subdomain',
@@ -35,7 +35,7 @@ export const geeTestV3Fields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: { show: { operation: ['geeTestV3'] } },
 		default: '',
-		description: 'Custom Geetest API subdomain (не api.geetest.com)',
+		description: 'Custom Geetest API subdomain (not api.geetest.com)',
 	},
 
 	{
@@ -45,7 +45,7 @@ export const geeTestV3Fields: INodeProperties[] = [
 		typeOptions: { editor: 'codeNodeEditor', rows: 3 },
 		displayOptions: { show: { operation: ['geeTestV3'] } },
 		default: '',
-		description: 'JSON string с параметрами загрузки скрипта',
+		description: 'JSON string with script loading parameters',
 	},
 
 	{

@@ -43,7 +43,7 @@ export const recaptchaClick: INodeProperties[] = [
 		type: 'string',
 		displayOptions: { show: { operation: ['recaptchaClick'] } },
 		default: defaultUserAgent,
-		description: 'User-Agent для запроса к сайту',
+		description: 'User-Agent used for requests to the target website',
 	},
 ];
 
