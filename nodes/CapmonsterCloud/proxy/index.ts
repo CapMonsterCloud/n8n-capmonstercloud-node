@@ -71,7 +71,7 @@ export const proxyFields: INodeProperties[] = [
 				operation: taskTypes,
 			},
 		},
-		description: 'IP/hostname proxy. Example: 1.2.3.4 или proxy.example.com.',
+		description: 'Proxy IP/hostname. Example: 1.2.3.4 or proxy.example.com.',
 	},
 	{
 		displayName: 'Proxy Port',

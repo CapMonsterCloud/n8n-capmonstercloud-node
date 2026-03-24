@@ -46,7 +46,7 @@ export const buildComplexImageRecognition = function (
 	try {
 		metadata = JSON.parse(metadataRaw);
 	} catch {
-		throw new Error('metadata должен быть валидным JSON');
+		throw new Error('Metadata should be valid JSON');
 	}
 
 	return {

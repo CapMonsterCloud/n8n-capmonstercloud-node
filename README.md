@@ -1,48 +1,97 @@
-## Resources & Documentation
+# n8n-nodes-capmonstercloud
 
-- **Official Documentation**: [CapMonster Cloud Docs](https://docs.capmonster.cloud/) — Full API reference and guide.
-- **n8n Community Nodes**: [Official n8n Guide](https://n8n.io) for installing and managing community nodes.
+CapMonster Cloud community node for n8n.  
+Use this node to solve supported CAPTCHA challenges through the CapMonster Cloud API.
 
-## How to use
+## Requirements
 
-1. **Add Node**: Search for **CapMonster Cloud** in your n8n workflow.
+- n8n with community nodes enabled
+- A CapMonster Cloud account
+- A valid CapMonster Cloud API key
 
-![img_4.png](images/img_4.png)
+## Installation
 
-2. **Get your API Key**: Copy it from your [CapMonster Cloud Dashboard](https://dash.capmonster.cloud).
+Install the package as a community node in n8n:
 
-![img_1.png](images/img_1.png)
+```bash
+npm install @zennolab_com/n8n-nodes-capmonstercloud
+```
 
-3. **Add Api Key to node**:
-![img.png](images/keyNode.png)
-4. Select Task Type:
+You can also install it from the n8n Community Nodes UI.
 
-![selectCaptcha1.png](images/selectCaptcha1.png)
+## Credentials
 
-- Use the Task Type dropdown to choose the kind of captcha you want to solve:
-  - JSON (Custom Task) – supply any valid CapMonster task JSON.
-  - Recaptcha V2 / V2 Enterprise / V2 Proxy
-  - Recaptcha V3 / V3 Enterprise
-  - Image to Text
-  - GeeTest
-  - Cloudflare Turnstile (token, managed challenge, waiting room)
-  - Complex Image Tasks (click, recognition)
-  - DataDome, Basilisk, TenDI, Amazon (multiple variants), Binance, Imperva, Prosopo, Temu, Yidun, MTCaptcha, Altcha, FunCaptcha, Castle, TSPD, Hunt
-  - Some task types support optional proxy settings.
-  ![selectCaptchaWithProxy.png](images/selectCaptchaWithProxy.png)
+This node uses one credential:
 
-5. **Customize Payload**:
-   - For JSON tasks, supply a full CapMonster JSON object without clientKey. 
-   - For built-in task types, fill the provided fields (e.g., websiteURL, websiteKey, userAgent, metadata). 
-   - If the task supports proxies, enable Use Proxy and fill the proxy details.![img_2.png](images/img_2.png)
+- **CapMonster Cloud API**
+  - `Client Key`: your API key from [CapMonster Cloud Dashboard](https://dash.capmonster.cloud)
 
-    - Find the exact JSON structure in the [Official Task Documentation](https://docs.capmonster.cloud/docs/captchas/).
-      ```json 
-      {
-          "type":"RecaptchaV2Task",
-          "websiteURL":"https://lessons.zennolab.com/captchas/recaptcha/v2_simple.php?level=high",
-          "websiteKey":"6Lcg7CMUAAAAANphynKgn9YAgA4tQ2KI_iqRyTwd"
-      }
-      ```
-6. **Execution**: The node will automatically:
-    - Return the solution (token) once it's ready.
+## Supported operations
+
+The node provides multiple task types, including:
+
+- JSON (custom task payload)
+- Recaptcha V2 and Recaptcha V2 Enterprise
+- Recaptcha V3 and Recaptcha V3 Enterprise
+- GeeTest V3 and GeeTest V4
+- Cloudflare Turnstile (token, managed challenge, waiting room)
+- Image to Text
+- Complex image tasks (click and recognition)
+- Additional task types such as DataDome, Basilisk, TenDI, Amazon variants, Binance, Imperva, Prosopo, Temu, Yidun, MTCaptcha, Altcha, FunCaptcha, Castle, TSPD, and Hunt
+
+Some task types support optional proxy parameters.
+
+## Usage
+
+1. Add **CapMonster Cloud** node to your workflow.
+2. Select or create **CapMonster Cloud API** credentials.
+3. Choose a task type in **Task Type**.
+4. Fill required fields for the selected task.
+5. Execute the node.
+
+The node creates a task, polls CapMonster Cloud until completion, and returns the solution in the node output.
+
+## JSON task example
+
+When using the JSON operation, provide a valid CapMonster task object without `clientKey`:
+
+```json
+{
+	"type": "RecaptchaV2Task",
+	"websiteURL": "https://lessons.zennolab.com/captchas/recaptcha/v2_simple.php?level=high",
+	"websiteKey": "6Lcg7CMUAAAAANphynKgn9YAgA4tQ2KI_iqRyTwd"
+}
+```
+
+## Output
+
+The node returns the solved task response from CapMonster Cloud, including solution fields for the selected task type.
+
+## Troubleshooting
+
+- Verify your API key is valid and active.
+- Confirm all required fields for the selected task type are provided.
+- For JSON tasks, ensure the payload is valid JSON and matches the API schema.
+- If a task requires proxy data, provide a working proxy host, port, and protocol.
+
+## Optional UI examples
+
+You can use the screenshots below as a quick visual reference for node setup in n8n.
+
+### Node and task type selection
+
+![CapMonster Cloud node setup](images/selectCaptcha1.png)
+
+### Credentials configuration
+
+![CapMonster Cloud credentials](images/keyNode.png)
+
+## Documentation
+
+- [CapMonster Cloud Documentation](https://docs.capmonster.cloud/)
+- [CapMonster CAPTCHA task reference](https://docs.capmonster.cloud/docs/captchas/)
+- [n8n Community Nodes Guide](https://docs.n8n.io/integrations/community-nodes/)
+
+## License
+
+[MIT](LICENSE)
