@@ -28,6 +28,12 @@ npm install @zennolab_com/n8n-nodes-capmonstercloud
 
 You can also install it from the n8n Community Nodes UI.
 
+## Quick start
+
+1. Install the community node.
+2. Add a **CapMonster Cloud API** credential with your client key.
+3. Choose a task type and run the workflow.
+
 ## Credentials
 
 This node uses one credential:
