@@ -10,7 +10,7 @@ Use CapMonster Cloud inside n8n workflows to create and solve supported CAPTCHA 
 - Documentation: [docs.capmonster.cloud](https://docs.capmonster.cloud/)
 - Dashboard / API key: [dash.capmonster.cloud](https://dash.capmonster.cloud/)
 
-$ Want to test before depositing? Contact support and we’ll add trial credits to your account.
+💵 Want to test before depositing? Contact support and we’ll add trial credits to your account.
 
 ## Requirements
 
