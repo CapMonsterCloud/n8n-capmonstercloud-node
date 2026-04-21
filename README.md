@@ -1,7 +1,14 @@
-# n8n-nodes-capmonstercloud
+# CapMonster Cloud node for n8n
 
-CapMonster Cloud community node for n8n.  
-Use this node to solve supported CAPTCHA challenges through the CapMonster Cloud API.
+[![npm version](https://img.shields.io/npm/v/%40zennolab_com%2Fn8n-nodes-capmonstercloud)](https://www.npmjs.com/package/@zennolab_com/n8n-nodes-capmonstercloud)
+
+Use CapMonster Cloud inside n8n workflows to create and solve supported CAPTCHA tasks through the CapMonster Cloud API.
+
+## Links
+
+- Package: [@zennolab_com/n8n-nodes-capmonstercloud](https://www.npmjs.com/package/@zennolab_com/n8n-nodes-capmonstercloud)
+- Documentation: [docs.capmonster.cloud](https://docs.capmonster.cloud/)
+- Dashboard / API key: [dash.capmonster.cloud](https://dash.capmonster.cloud/)
 
 ## Requirements
 
@@ -26,7 +33,7 @@ This node uses one credential:
 - **CapMonster Cloud API**
   - `Client Key`: your API key from [CapMonster Cloud Dashboard](https://dash.capmonster.cloud)
 
-## Supported operations
+## Supported task families
 
 The node provides multiple task types, including:
 
@@ -38,6 +45,8 @@ The node provides multiple task types, including:
 - Image to Text
 - Complex image tasks (click and recognition)
 - Additional task types such as DataDome, Basilisk, TenDI, Amazon variants, Binance, Imperva, Prosopo, Temu, Yidun, MTCaptcha, Altcha, FunCaptcha, Castle, TSPD, and Hunt
+
+See the public docs for request details, task parameters, and task-specific API behavior.
 
 Some task types support optional proxy parameters.
 
