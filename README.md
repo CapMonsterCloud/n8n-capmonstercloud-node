@@ -2,15 +2,13 @@
 
 [![npm version](https://img.shields.io/npm/v/%40zennolab_com%2Fn8n-nodes-capmonstercloud)](https://www.npmjs.com/package/@zennolab_com/n8n-nodes-capmonstercloud)
 
-Use CapMonster Cloud inside n8n workflows to create and solve supported CAPTCHA tasks through the CapMonster Cloud API.
+Use this community node to create and solve supported CapMonster Cloud tasks inside n8n workflows.
 
 ## Links
 
 - Package: [@zennolab_com/n8n-nodes-capmonstercloud](https://www.npmjs.com/package/@zennolab_com/n8n-nodes-capmonstercloud)
 - Documentation: [docs.capmonster.cloud](https://docs.capmonster.cloud/)
 - Dashboard / API key: [dash.capmonster.cloud](https://dash.capmonster.cloud/)
-
-💵 Want to test before depositing? Contact support and we’ll add trial credits to your account.
 
 ## Requirements
 
@@ -33,6 +31,8 @@ You can also install it from the n8n Community Nodes UI.
 1. Install the community node.
 2. Add a **CapMonster Cloud API** credential with your client key.
 3. Choose a task type and run the workflow.
+
+Need to test before depositing? Contact support and we’ll add trial credits to your account.
 
 ## Credentials
 
