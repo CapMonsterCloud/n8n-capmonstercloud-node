@@ -1,3 +1,7 @@
+✅ CapMonster.Cloud — Fast, Reliable CAPTCHA Solving for Automation & Scraping
+
+[![CapMonster Cloud](https://help.zennolab.com/upload/u/e4/e4bc15839b25.png)](https://capmonster.cloud/en/?utm_source=github&utm_campaign=cmcrep)
+
 # CapMonster Cloud node for n8n
 
 [![npm version](https://img.shields.io/npm/v/%40zennolab_com%2Fn8n-nodes-capmonstercloud)](https://www.npmjs.com/package/@zennolab_com/n8n-nodes-capmonstercloud)
@@ -7,8 +11,8 @@ Use this community node to create and solve supported CapMonster Cloud tasks ins
 ## Links
 
 - Package: [@zennolab_com/n8n-nodes-capmonstercloud](https://www.npmjs.com/package/@zennolab_com/n8n-nodes-capmonstercloud)
-- Documentation: [docs.capmonster.cloud](https://docs.capmonster.cloud/)
-- Dashboard / API key: [dash.capmonster.cloud](https://dash.capmonster.cloud/)
+- Documentation: [docs.capmonster.cloud](https://docs.capmonster.cloud/?utm_source=github&utm_campaign=cmcrep)
+- Dashboard / API key: [dash.capmonster.cloud](https://dash.capmonster.cloud/?utm_source=github&utm_campaign=cmcrep)
 
 ## Requirements
 
@@ -39,7 +43,7 @@ Need to test before depositing? Contact support and we’ll add trial credits to
 This node uses one credential:
 
 - **CapMonster Cloud API**
-  - `Client Key`: your API key from [CapMonster Cloud Dashboard](https://dash.capmonster.cloud)
+  - `Client Key`: your API key from [CapMonster Cloud Dashboard](https://dash.capmonster.cloud?utm_source=github&utm_campaign=cmcrep)
 
 ## Supported task families
 
@@ -105,10 +109,12 @@ You can use the screenshots below as a quick visual reference for node setup in 
 
 ## Documentation
 
-- [CapMonster Cloud Documentation](https://docs.capmonster.cloud/)
-- [CapMonster CAPTCHA task reference](https://docs.capmonster.cloud/docs/captchas/)
+- [CapMonster Cloud Documentation](https://docs.capmonster.cloud/?utm_source=github&utm_campaign=cmcrep)
+- [CapMonster CAPTCHA task reference](https://docs.capmonster.cloud/docs/captchas/?utm_source=github&utm_campaign=cmcrep)
 - [n8n Community Nodes Guide](https://docs.n8n.io/integrations/community-nodes/)
 
 ## License
 
 [MIT](LICENSE)
+
+:star:️ If you find this project useful, please give it a star on GitHub!
